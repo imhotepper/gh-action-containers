@@ -16,15 +16,15 @@ jobs:
 #      image: node:16
     env:
         MONGODB_CONNECTION_PROTOCOL: mongodb
-        MONGODB_CLUSTER_ADDRESS: 127.0.0.1:27017 #// if it runs in container all you need is -> mongodb // same as mongodb -> image
+        MONGODB_CLUSTER_ADDRESS: 127.0.0.1:27017 # if it runs in container all you need is -> mongodb // same as mongodb -> image
         MONGODB_USERNAME: root
         MONGODB_PASSWORD: example
         PORT: 8080
     services:
       mongodb:
           image: mongo
-          ports:            #// needed only if line 14 & 15 are commented
-            - 27017:27017   #// needed only if line 14 & 15 are commented
+          ports:            # needed only if line 14 & 15 are commented
+            - 27017:27017   # needed only if line 14 & 15 are commented
           env:
             MONGO_INITDB_ROOT_USERNAME: root
             MONGO_INITDB_ROOT_PASSWORD: example
